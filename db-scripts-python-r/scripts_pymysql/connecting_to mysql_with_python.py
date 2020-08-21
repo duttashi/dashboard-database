@@ -2,6 +2,7 @@
 """
 Created on Fri May  8 22:02:47 2020
 Revised on May 14 9:17 AM 2020
+Re-revised on August 21, 2020 2:16PM
 
 @author: Ashish
 """
@@ -15,11 +16,12 @@ Revised on May 14 9:17 AM 2020
 
 import mysql.connector as conx
 
+# replace value for password with your db password
 db = conx.connect(host="localhost", user="root", 
-                  password="ashoo", db="db_practise")
+                  password="yourdbpassword", db="logbook")
 print(db)
 cursor = db.cursor()
-cursor.execute("SELECT * from deathrow")
+cursor.execute("SELECT * from tbl_grocery")
 data = cursor.fetchall()
 for row in data:
     print(row)
