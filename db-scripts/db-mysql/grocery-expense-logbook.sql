@@ -1,18 +1,23 @@
 use logbook;
-# drop table tbl_grocery;
-
-# create table grocery
-create table tbl_grocery(
-shopid int not null auto_increment,
-shop_date date, store_name varchar(30) default "Aeon Big", store_loc varchar(30) default "Mid Valley", 
-item_brand  varchar(30), item_desc varchar(30),
-item_cost float default 0.0, item_weight float default 0.0,item_discount float default 0.0,
-primary key(shopid));
-
 desc logbook.tbl_grocery;
 
 # Grocery Shopping data August 2020
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
+values ("2020-8-20","local vegetable","red onions",1,1),
+("2020-8-20","local vegetable","tomato",3.49,1),
+("2020-8-20","local vegetable","potato",4.12,1),
+("2020-8-20","local vegetable","french beans",4.30,.4),
+("2020-8-20","local vegetable","pak choy",1.15,.4),
+("2020-8-20","local vegetable","kailan",2.80,0.5),
+("2020-8-20","local vegetable","radish (mooli)",3.74,0.5),
+("2020-8-20","seeds","red beans",7.51,0.504),
+("2020-8-20","seeds","yellow beans",7.14,0.446),
+("2020-8-20","dry produce","captain cook oats",10,.800),
+("2020-8-20","tea","Instant barley drink",6.43,1),
+("2020-8-20","spices","ketumbar",2.80,0.5),
+("2020-8-20","butter","Daisy crunchy peanut butter",11.09,1);
+
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-8-8","local vegetable","red onions",2,1),
 ("2020-8-8","local vegetable","tomato",3.43,1),
 ("2020-8-8","local vegetable","potato",4.02,1),
@@ -28,7 +33,7 @@ values ("2020-8-8","local vegetable","red onions",2,1),
 ("2020-8-8","local toffee","sweets",3.99,0.4);
 
 # Grocery Shopping data July 2020
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-7-7","local vegetable","pak choy",3,1),
 ("2020-7-7","local vegetable","potato",6.53,1),
 ("2020-7-7","local vegetable","green chilli",2.50,0.3),
@@ -38,7 +43,7 @@ values ("2020-7-7","local vegetable","pak choy",3,1),
 ("2020-7-7","laundry","Downy mystique softener",5.99,1),
 ("2020-7-7","local vegetable","japanese CF",2.50,0.3);
 
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-7-16","local vegetable","pak choy",1.50,1),
 ("2020-7-16","local vegetable","potato",3.74,1),
 ("2020-7-16","local vegetable","red chilli",3.30,0.3),
@@ -50,7 +55,7 @@ values ("2020-7-16","local vegetable","pak choy",1.50,1),
 ("2020-7-16","laundry","Protex bar soap (herbal) 75gm",6.50,1),
 ("2020-7-16","dry produce","red beans",5.84,0.5);
 
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-7-29","local vegetable","pak choy",1.50,1),
 ("2020-7-29","local vegetable","potato",4.67,1),
 ("2020-7-29","local vegetable","red chilli",3.30,0.3),
@@ -72,7 +77,7 @@ select * from tbl_grocery where shop_date = "2020-7-29";
 
 # Grocery Shopping data June 2020
 use logbook;
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values 
 ("2020-6-16","local vegetable","potato",7.16,1),
 ("2020-6-16","local vegetable","green chilli",2.50,0.3),
@@ -87,7 +92,7 @@ values
 ("2020-6-16","spices","black pepper",4.67,0.25);
 select * from tbl_grocery where shop_date = "2020-6-16";
 
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-6-28","local vegetable","pak choy",1.50,1),
 ("2020-6-28","local vegetable","potato",6.23,1),
 ("2020-6-28","local vegetable","red chilli",3.30,0.3),
@@ -108,7 +113,7 @@ select * from logbook.tbl_grocery where item_desc="tomato";
 
 # Grocery Shopping data May 2020
 use logbook;
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-5-07","local vegetable","pak choy",1.50,1),
 ("2020-5-07","local vegetable","potato",10.90,1),
 ("2020-5-07","local vegetable","green chilli",3,0.100),
@@ -122,7 +127,7 @@ values ("2020-5-07","local vegetable","pak choy",1.50,1),
 ("2020-5-07","hair care","extra virgin coconut oil",8.50,0.6),
 ("2020-5-07","dairy produce","eggs (15pcs)",8.50,15);
 
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values 
 ("2020-5-28","local vegetable","potato",3.16,1),
 ("2020-5-28","local vegetable","green chilli",3,0.100),
@@ -151,7 +156,7 @@ select * from logbook.tbl_grocery where shop_date = "2020-05-07" or shop_date = 
 
 # Grocery Shopping data April 2020
 use logbook;
-insert into tbl_grocery (shop_date, store_name, store_loc,item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, store_name, store_loc,item_type, item_desc,item_cost,item_weight)
 values ("2020-4-05","Village Grocer","KL Gateway Universiti","local vegetable","french bean",3.92,1),
 ("2020-4-05","Village Grocer","KL Gateway Universiti","local vegetable","potato",4.50,1),
 ("2020-4-05","Village Grocer","KL Gateway Universiti","local vegetable","green chilli",2.90,0.100),
@@ -170,7 +175,7 @@ select * from tbl_grocery where item_desc like "%peanut%";
 
 # Grocery Shopping data March 2020
 use logbook;
-insert into tbl_grocery (shop_date, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values 
 ("2020-3-14","local vegetable","green chilli",2.29,.100),
 ("2020-3-14","local vegetable","green leaf",3.70,0.5),
@@ -282,3 +287,12 @@ values
 ("2020-1-20","Village Grocer","KL Gateway Universiti","fruit","cavendish Banana (6pcs)",5.91,6),
 ("2020-1-20","Village Grocer","KL Gateway Universiti","fruit","Dolce cut pineapple",4.10,1),
 ("2020-1-20","Village Grocer","KL Gateway Universiti","fruit","USA Apple",12.90,6);
+
+
+# create table grocery
+create table tbl_grocery(
+shopid int not null auto_increment,
+shop_date date, store_name varchar(30) default "Aeon Big", store_loc varchar(30) default "Mid Valley", 
+item_type  varchar(30), item_desc varchar(30),
+item_cost float default 0.0, item_weight float default 0.0,item_discount float default 0.0,
+primary key(shopid));
