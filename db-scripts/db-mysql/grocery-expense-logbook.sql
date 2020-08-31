@@ -2,6 +2,13 @@ use logbook;
 desc logbook.tbl_grocery;
 
 # Grocery Shopping data August 2020
+insert into tbl_grocery (shop_date, store_name, store_loc,item_type, item_desc,item_cost,item_weight)
+values ("2020-8-28","Giant","Amcorp Mall, Taman Jaya","dry produce","Enrico Soyamate",3.25,0.250),
+("2020-8-28","Giant","Amcorp Mall, Taman Jaya","dry produce","Enrico Soyamate",3.25,0.250),
+("2020-8-28","Giant","Amcorp Mall, Taman Jaya","spices","Baba's Turmeric powder",2.50,0.125),
+("2020-8-28","Giant","Amcorp Mall, Taman Jaya","spices","Mixed spices",1,0.50);
+SELECT * FROM logbook.tbl_grocery where store_loc like "%Taman%";
+
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values ("2020-8-20","local vegetable","red onions",1,1),
 ("2020-8-20","local vegetable","tomato",3.49,1),
