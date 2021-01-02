@@ -1,5 +1,36 @@
 use logbook;
 desc logbook.tbl_grocery;
+select * from tbl_grocery where item_desc like '%coffee%';
+select * from tbl_grocery order by shop_date;
+alter table tbl_grocery modify item_desc varchar(150);
+
+# Grocery Shopping data September 2020
+use logbook;
+desc logbook.tbl_grocery;
+select * from tbl_grocery where item_desc like '%coffee%';
+insert into tbl_grocery (shop_date, store_name, store_loc, item_type, item_desc,item_cost,item_weight)
+values ("2020-9-19", "Jaya Grocer", "Damansara", "dry producee","captain cook (blue pack) oats",9.50,1),
+("2020-9-19", "Jaya Grocer", "Damansara","oral hygine","maxifresh mouthWash",5.90,.300),
+("2020-9-19", "Jaya Grocer", "Damansara","coffee","Nutrigold Coffee (30 sticks)",9.30,1);
+
+# Grocery Shopping data September 2020
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
+values ("2020-9-5","local vegetable","red onions",2.11,1),
+("2020-9-5","local vegetable","tomato",5.42,1),
+("2020-9-5","local vegetable","potato",4.02,1),
+("2020-9-5","local vegetable","white garlic",2.11,.4),
+("2020-9-5","spices","kali mirch",4.15,0.064),
+("2020-9-5","dairy produce","rasaku coconut milk",9.40,4),
+("2020-9-5","dry produce","Eva Honey",10.86,.500),
+("2020-9-5","laundry","Protex Bar Soap (ice cool) 75gm",6.50,4),
+("2020-9-5","spices","Tom Yam Cubes",2.65,1),
+("2020-9-5","tea","Ahmad Jasmine Green Tea (100 bags)",14.89,1);
+# show data  for shopping date
+
+select * from tbl_grocery where shop_date = '2020-9-5';
+select * from tbl_grocery where shop_date >= '2020-1-1' and shop_date<='2020-9-01';
+
+
 
 # Grocery Shopping data August 2020
 insert into tbl_grocery (shop_date, store_name, store_loc,item_type, item_desc,item_cost,item_weight)
@@ -135,6 +166,9 @@ values ("2020-5-07","local vegetable","pak choy",1.50,1),
 ("2020-5-07","dairy produce","eggs (15pcs)",8.50,15);
 
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
+values ("2020-5-07","tea","Ahmad Green Tea (25 bags)",5.46,1);
+
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost,item_weight)
 values 
 ("2020-5-28","local vegetable","potato",3.16,1),
 ("2020-5-28","local vegetable","green chilli",3,0.100),
@@ -153,7 +187,7 @@ values
 ("2020-5-28","spices","Knorr chicken cubes",3.26,1);
 
 # replace the column value in store_name, store_loc
-select * from logbook.tbl_grocery;
+#select * from logbook.tbl_grocery;
 update logbook.tbl_grocery set store_name = "Village Grocer" where shop_date = '2020-05-07';
 update logbook.tbl_grocery set store_name = "Village Grocer" where shop_date = '2020-05-28';
 update logbook.tbl_grocery set store_loc = "KL Gateway Universiti" where shop_date = '2020-05-07';
@@ -177,8 +211,8 @@ values ("2020-4-05","Village Grocer","KL Gateway Universiti","local vegetable","
 ("2020-4-05","Village Grocer","KL Gateway Universiti","laundry","johnsons baby soap",7.20,0.4),
 ("2020-4-05","Village Grocer","KL Gateway Universiti","dry produce","evergreen coconut powder",1.30,0.50),
 ("2020-4-05","Village Grocer","KL Gateway Universiti","coffee","Super 3in1",12.50,1);
-select * from tbl_grocery where store_name like "Village%";
-select * from tbl_grocery where item_desc like "%peanut%";
+#select * from tbl_grocery where store_name like "Village%";
+#select * from tbl_grocery where item_desc like "%peanut%";
 
 # Grocery Shopping data March 2020
 use logbook;
@@ -193,7 +227,7 @@ values
 ("2020-3-14","dry produce","Yellow beans",5.30,0.5),
 ("2020-3-14","coffee","Nutrigold 3in1",7.99,1);
 
-insert into tbl_grocery (shop_date, store_name, store_loc, item_brand, item_desc,item_cost,item_weight)
+insert into tbl_grocery (shop_date, store_name, store_loc, item_type, item_desc,item_cost,item_weight)
 values
 ("2020-3-20","Village Grocer","KL Gateway Universiti","dry produce","chickpea",3.60,0.3), 
 ("2020-3-20","Village Grocer","KL Gateway Universiti","local vegetable","tomamto",6.03,5),
@@ -205,10 +239,10 @@ values
 ("2020-3-20","Village Grocer","KL Gateway Universiti","dry produce","Yellow beans",5.30,0.5),
 ("2020-3-20","Village Grocer","KL Gateway Universiti","dairy produce","dutch lady full-cream milk",9.25,1),
 ("2020-3-20","Village Grocer","KL Gateway Universiti","dry produce","Prego spiral macroni",3.29,0.300);
-select * from tbl_grocery;
+#select * from tbl_grocery;
 # rename the column from item_brand to item_type
-alter table logbook.tbl_grocery rename column item_brand to item_type; 
-select * from tbl_grocery where item_type like "%tea";
+#alter table logbook.tbl_grocery rename column item_brand to item_type; 
+#select * from tbl_grocery where item_type like "%tea";
 
 # Grocery Shopping data February 2020
 use logbook;
@@ -300,6 +334,6 @@ values
 create table tbl_grocery(
 shopid int not null auto_increment,
 shop_date date, store_name varchar(30) default "Aeon Big", store_loc varchar(30) default "Mid Valley", 
-item_type  varchar(30), item_desc varchar(30),
+item_type  varchar(30), item_desc varchar(150),
 item_cost float default 0.0, item_weight float default 0.0,item_discount float default 0.0,
 primary key(shopid));
