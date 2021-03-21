@@ -3,6 +3,29 @@ desc logbook.tbl_grocery;
 select * from tbl_grocery where item_desc like '%coffee%';
 select * from tbl_grocery order by shop_date;
 alter table tbl_grocery modify item_desc varchar(150);
+# change default value for store name, location
+alter table tbl_grocery modify column store_name varchar(20) not null default 'MyDin';
+alter table tbl_grocery modify column store_loc varchar(30) not null default 'Seberang Perai';
+
+# Grocery Shopping data March 2021
+use logbook;
+desc logbook.tbl_grocery;
+select item_type from tbl_grocery;
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values ("2021-3-20", "local vegetable","brinjal",2.85),
+("2021-3-20", "local vegetable","tomamto",3.35),
+("2021-3-20", "local vegetable","green chilli",1.10),
+("2021-3-20", "local vegetable","curry leaf",1.09),
+("2021-3-20", "local vegetable","indian bean",2.44),
+("2021-3-20", "local vegetable","cucumber",4.61),
+("2021-3-20", "dry produce","dry red chilli",1.32),
+("2021-3-20", "dry produce","groundnut",3.95),
+("2021-3-20", "dry produce","banana cake",4),
+("2021-3-20", "dry produce","fried tofu",1.90),
+("2021-3-20", "fruit","apple",6.90),
+("2021-3-20", "laundry","touch dishwashing liquid",3.90);
+# show data for march 2021
+select * from tbl_grocery where year(shop_date)=2021;
 
 # Grocery Shopping data September 2020
 use logbook;
