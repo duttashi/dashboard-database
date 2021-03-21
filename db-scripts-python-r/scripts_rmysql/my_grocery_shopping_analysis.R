@@ -7,6 +7,10 @@ library(plyr) # for revalue
 library(gridExtra)
 library(grid) # for grid.rect()
 library(ggpubr) # for annotate_figure()
+library(ggthemes)
+
+# clean the workspace
+rm(list = ls())
 
 # connect to mysql config file
 rmariadb.settingsfile<-"C:\\ProgramData\\MySQL\\MySQL Server 8.0\\config_file_connect_mysql_to_r.cnf"
@@ -45,7 +49,7 @@ df$shop_date<- as.numeric(df$shop_date)
 df$shop_month<- revalue(df$shop_month, 
                         c("01"="Jan","02"="Feb","03"="Mar",
                           "04"="Apr","05"="May","06"="Jun",
-                          "07"="Jul","08"="Aug"))
+                          "07"="Jul","08"="Aug", "09"="Sep"))
 
 # change data type
 str(df)
@@ -62,20 +66,33 @@ table(df$item_type)
 # laundry = hair care, oral hygine
 levels(df$item_type)<- list("beverage"=c("coffee","tea"),
                                     "snack"=c("local toffee", "chocolate", "fruit","snacks","butter"),
-                                    "cooking_item"=c("cooking oil","spices","local vegetable", "dairy produce"),
-                                    "dry_produce"=c("dry produce","seeds"),
+                                    "cook_item"=c("cooking oil","spices","local vegetable", "dairy produce"),
+                                    "dry_prod"=c("dry produce","seeds"),
                                     "laundry"=c("laundry","oral hygine","hair care")
                                     )
-levels(df$item_type)
 
+levels(df$store_loc)<- list("Damansara"=c("Amcorp Mall, Taman Jaya",
+                                          "Damansara"),
+                            "PetalingJaya"= c("Jaya One","KL Gateway Universiti"),
+                            "MidValley"="Mid Valley")
+table(df$store_loc)
 # Visualisation
 # CREATING A MANUAL COLOR PALETTE
 mycolors = c(brewer.pal(name="Set2", n = 8), 
              brewer.pal(name="Set1", n = 6))
 
+df %>%
+  drop_na(store_loc)%>%
+  ggplot(aes(x = store_loc))+
+  geom_bar(stat="count", color="black",aes(fill = store_name))+
+  theme_few()+
+  ggtitle("(a) Favorite shopping destination")
+
 p<-ggplot(data = df, aes(x = store_loc))
 p1<-p +geom_bar(stat = "count", color="black",aes(fill = store_name))+
-  theme_light()+
+  
+  #theme_light()+
+  theme_few()+
   ggtitle("(a) Favorite shopping destination")+
   scale_x_discrete(name="Store Location", labels=c("Amcorp Mall","Jaya One","KL Gateway","Mid Valley"))+
   scale_y_continuous(name = "store visit count")+
@@ -84,7 +101,8 @@ p1<-p +geom_bar(stat = "count", color="black",aes(fill = store_name))+
 
 p<-ggplot(data = df, aes(x = item_type))
 p2<-p +geom_bar(stat = "count", color="black",aes(fill = store_name))+
-  theme_light()+
+  #theme_light()+
+  theme_few()+
   ggtitle("(b) Favorite shopping product")+
   scale_x_discrete(name="Item Type", labels=c("beverage","snacks","cooking item","dry produce","laundry"))+
   scale_y_continuous(name = "store visit count")+
@@ -93,7 +111,8 @@ p2<-p +geom_bar(stat = "count", color="black",aes(fill = store_name))+
 
 p<-ggplot(data = df, aes(x = store_loc, y= item_cost))
 p3<-p+geom_boxplot(outlier.colour = "red")+
-  theme_light()+
+  #theme_light()+
+  theme_few()+
   ggtitle("(c) Cost vs Location")+
   scale_x_discrete(name="Store Location", labels=c("Amcorp Mall","Jaya One","KL Gateway","Mid Valley"))+
   scale_y_continuous(name = "Count of item cost")+
@@ -102,7 +121,8 @@ p3<-p+geom_boxplot(outlier.colour = "red")+
 
 p<-ggplot(data = df, aes(x = store_loc, y= item_cost))
 p4<-p+geom_boxplot(outlier.colour = "red")+
-  theme_light()+
+  #theme_light()+
+  theme_few()+
   ggtitle("(c) Shop location vs Cost")+
   scale_x_discrete(name="Store Location", labels=c("Amcorp Mall","Jaya One","KL Gateway","Mid Valley"))+
   scale_y_continuous(name = "Count of item cost")+
