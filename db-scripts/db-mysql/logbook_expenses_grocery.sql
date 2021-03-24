@@ -9,8 +9,7 @@ alter table tbl_grocery modify column store_loc varchar(30) not null default 'Se
 
 # Grocery Shopping data March 2021
 use logbook;
-desc logbook.tbl_grocery;
-select item_type from tbl_grocery;
+# add grocery shopping data for 20/3/2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values ("2021-3-20", "local vegetable","brinjal",2.85),
 ("2021-3-20", "local vegetable","tomamto",3.35),
@@ -24,6 +23,61 @@ values ("2021-3-20", "local vegetable","brinjal",2.85),
 ("2021-3-20", "dry produce","fried tofu",1.90),
 ("2021-3-20", "fruit","apple",6.90),
 ("2021-3-20", "laundry","touch dishwashing liquid",3.90);
+
+# add grocery shopping data for 17/3/2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-3-17", "local vegetable","carrot",3.25),
+("2021-3-17", "local vegetable","shittake mushroom",9.98),
+("2021-3-17", "local vegetable","small bittergourd",3.54),
+("2021-3-17", "dry produce","pilsbury aata 5kg",20.80),
+("2021-3-17", "local vegetable","russet potato",5.71),
+("2021-3-17", "toiletries","toilet brush",3.20);
+
+# add grocery shopping data for 14/3/2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-3-14", "dairy produce","yeo yogurt",7.80),
+("2021-3-14", "local vegetable","shittake mushroom",4.99),
+("2021-3-14", "local vegetable","cucumber",5.65),
+("2021-3-14", "fruit","top red apple",6.90),
+("2021-3-14", "coffee","aik cheong 3in1 30pack",7.75),
+("2021-3-14", "toiletries","toouch metal dishwasher",1.80),
+("2021-3-14", "local vegetable","green chilli",1),
+("2021-3-14", "local vegetable","french beans",3.85),
+("2021-3-14", "tea","lipton green tea 50 bags",11.95),
+("2021-3-14", "dairy produce","fried tofu",1.90),
+("2021-3-14", "spices","baba chilli powder",0.90),
+("2021-3-14", "spices","faiza meat powder",3.85),
+("2021-3-14", "spices","suria corriander powder",1.70);
+
+# add grocery shopping data for 08/3/2021
+use logbook;
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-3-8", "dairy produce","yeo yogurt",7.80),
+("2021-3-8", "local vegetable","shittake mushroom",4.99),
+("2021-3-8", "local vegetable","cucumber",3.61),
+("2021-3-8", "fruit","top red apple",6.90),
+("2021-3-8", "local vegetable","red onion",1.88),
+("2021-3-8", "local vegetable","local potato",1.03),
+("2021-3-8", "local vegetable","local tomamto",4.43),
+("2021-3-8", "frozen meat","ayam chicken drummet 850gm",17.90),
+("2021-3-8", "frozen meat","suria fried fish balls 300gm",5.95);
+
+# add grocery shopping data for 04/3/2021
+use logbook;
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-3-4", "dairy produce","yeo yogurt",7.80),
+("2021-3-4", "local vegetable","baby yam",2.22),
+("2021-3-4", "local vegetable","broccoli",2.99),
+("2021-3-4", "local vegetable","local tomamto",8.68),
+("2021-3-4", "local vegetable","mint leaves",1.09),
+("2021-3-4", "sauce","puteri chilli sauce",2.10),
+("2021-3-4", "spices","local salt",0.20);
+
+
 # show data for march 2021
 select * from tbl_grocery where year(shop_date)=2021;
 
