@@ -1,7 +1,4 @@
 use logbook;
-desc logbook.tbl_grocery;
-select * from tbl_grocery where item_desc like '%coffee%';
-select * from tbl_grocery order by shop_date;
 alter table tbl_grocery modify item_desc varchar(150);
 # change default value for store name, location
 alter table tbl_grocery modify column store_name varchar(20) not null default 'MyDin';
@@ -9,6 +6,22 @@ alter table tbl_grocery modify column store_loc varchar(30) not null default 'Se
 
 # Grocery Shopping data March 2021
 use logbook;
+
+# add grocery shopping data for 27/3/2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values ("2021-3-27", "local vegetable","baby yam",2.21),
+("2021-3-27", "local vegetable","tomamto",3.47),
+("2021-3-27", "local vegetable","cucumber",6.06),
+("2021-3-27", "dry produce","banana cake",4.30),
+("2021-3-27", "fruit","apple-green",6.49),
+("2021-3-27", "dry produce","salt",0.30),
+("2021-3-27", "local vegetable","shittake mushroom",4.99),
+("2021-3-27", "local vegetable","carrot",2.18),
+("2021-3-27", "local vegetable","red onion",2.10),
+("2020-3-27","local vegetable","white garlic",1.27),
+("2021-3-27", "frozen meat","Wise choice chicken nugget 1kg",12.40);
+
+
 # add grocery shopping data for 20/3/2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values ("2021-3-20", "local vegetable","brinjal",2.85),
@@ -86,7 +99,7 @@ use logbook;
 desc logbook.tbl_grocery;
 select * from tbl_grocery where item_desc like '%coffee%';
 insert into tbl_grocery (shop_date, store_name, store_loc, item_type, item_desc,item_cost,item_weight)
-values ("2020-9-19", "Jaya Grocer", "Damansara", "dry producee","captain cook (blue pack) oats",9.50,1),
+values ("2020-9-19", "Jaya Grocer", "Damansara", "dry produce","captain cook (blue pack) oats",9.50,1),
 ("2020-9-19", "Jaya Grocer", "Damansara","oral hygine","maxifresh mouthWash",5.90,.300),
 ("2020-9-19", "Jaya Grocer", "Damansara","coffee","Nutrigold Coffee (30 sticks)",9.30,1);
 
@@ -406,7 +419,9 @@ values
 ("2020-1-20","Village Grocer","KL Gateway Universiti","fruit","Dolce cut pineapple",4.10,1),
 ("2020-1-20","Village Grocer","KL Gateway Universiti","fruit","USA Apple",12.90,6);
 
-
+# drop table
+use logbook;
+drop table if exists tbl_grocery;
 # create table grocery
 create table tbl_grocery(
 shopid int not null auto_increment,
