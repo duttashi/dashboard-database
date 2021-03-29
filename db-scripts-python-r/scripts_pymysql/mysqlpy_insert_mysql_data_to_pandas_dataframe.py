@@ -6,7 +6,7 @@ Objective: Write mysql table into a pandas dataframe
 """
 
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, exc
 import pandas as pd
 
 # Define global variables
@@ -25,9 +25,5 @@ try:
     print(df.head)
     # close the database connection
     mysql_cmd.close()
-except exc.DBAPIError as e:
-    # an exception is raised, Connection is invalidated.
-    if e.connection_invalidated:
-        print("Connection was invalidated!")
-    
-
+except exc.DBAPIError:
+    print("connection failed", exc.DBAPIError)
