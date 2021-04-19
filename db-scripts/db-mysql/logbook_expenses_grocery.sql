@@ -4,14 +4,38 @@ alter table tbl_grocery modify item_desc varchar(150);
 alter table tbl_grocery modify column store_name varchar(20) not null default 'MyDin';
 alter table tbl_grocery modify column store_loc varchar(30) not null default 'Seberang Perai';
 
-# Grocery Shopping data April 2021
+# April 2021 - Grocery Shopping data
 use logbook;
-
-# add grocery shopping data for 2/4/2021
+desc logbook.tbl_grocery;
+# add grocery shopping data for 17-April-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
-values ("2021-4-2", "tobacco","marlboro light cigratte",17.40);
+values 
+("2021-4-17", "local vegetable","cucumber",3.81),
+("2021-4-17", "spices","baba's turmeric powder",2.45),
+("2021-4-17", "local vegetable","baby yam",6.45),
+("2021-4-17", "local vegetable","green chilli",0.85),
+("2021-4-17", "dry produce","soyabean (open)",2.35),
+("2021-4-17", "dry produce","cholle (kidney bean)",4.45),
+("2021-4-17", "coffee","kapal white coffee wit chocolate 20pc",7.90);
 
-# add grocery shopping data for 2/4/2021
+# add grocery shopping data for 9-April-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values ("2021-4-9", "local vegetable","shittake mushroom",4.99),
+("2021-4-9", "local vegetable","french bean",1.73),
+("2021-4-9", "dry produce","fried tofu",1.90),
+("2021-4-9", "local vegetable","broccoli",3.29),
+("2021-4-9", "local vegetable","russet potato",6),
+("2021-4-9", "local vegetable","cucumber",7.24),
+("2021-4-9", "dry produce","samudra banana cake",4.30),
+("2021-4-9", "fruit","apple-red",7.99),
+("2021-4-9", "local vegetable","carrot",1.49),
+("2021-4-9", "local vegetable","red onion",4.75),
+("2021-4-9", "dry produce","dried matar",1.49),
+("2021-4-9", "spices","thalipu (zeera mix)",0.95),
+("2021-4-9", "dry produce","kuih cake",5.50);
+
+
+# add grocery shopping data for 4/April/2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values ("2021-4-4", "local vegetable","green chilli",1.24),
 ("2021-4-4", "local vegetable","french bean",1.73),
@@ -21,6 +45,9 @@ values ("2021-4-4", "local vegetable","green chilli",1.24),
 ("2021-4-4", "local vegetable","broccoli",2.99),
 ("2021-4-4", "local vegetable","tomato",2.39);
 
+# add grocery shopping data for 2/April/2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values ("2021-4-2", "tobacco","marlboro light cigratte",17.40);
 
 # Grocery Shopping data March 2021
 use logbook;
