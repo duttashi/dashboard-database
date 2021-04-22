@@ -6,3 +6,4 @@
 /db-scripts-powerbi/data
 /pbi-notes/*.pdf
 .spyproject
+*.cpython-37.pyc
