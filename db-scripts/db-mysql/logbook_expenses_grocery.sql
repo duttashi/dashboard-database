@@ -4,6 +4,22 @@ alter table tbl_grocery modify item_desc varchar(150);
 alter table tbl_grocery modify column store_name varchar(20) not null default 'MyDin';
 alter table tbl_grocery modify column store_loc varchar(30) not null default 'Seberang Perai';
 
+# May 2021 - Grocery Shopping data
+use logbook;
+desc logbook.tbl_grocery;
+# add grocery shopping data for 1-May-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-5-1", "local vegetable","fried taufu",2.05),
+("2021-5-1", "local vegetable","red chilli",0.60),
+("2021-5-1", "local vegetable","baby yam",4.54),
+("2021-5-1", "local vegetable","tomato",1.21),
+("2021-5-1", "local vegetable","red onion",0.82),
+("2021-5-1", "local vegetable","potato",1.32),
+("2021-5-1", "biscuit","munchy dark chocolate",9.90),
+("2021-5-1", "dry produce","samudra banana cake",4.30),
+("2021-5-1", "dry produce","pilsbury aata 1kg",4.30);
+
 # April 2021 - Grocery Shopping data
 use logbook;
 desc logbook.tbl_grocery;
