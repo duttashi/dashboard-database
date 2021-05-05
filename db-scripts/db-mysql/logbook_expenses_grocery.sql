@@ -151,10 +151,101 @@ values
 ("2021-3-4", "sauce","puteri chilli sauce",2.10),
 ("2021-3-4", "spices","local salt",0.20);
 
-
 # show data for march 2021
 select * from tbl_grocery where year(shop_date)=2021;
 
+# Feb 2021 - Grocery Shopping data
+use logbook;
+desc logbook.tbl_grocery;
+# 3-Feb-2021 grocery shopping data
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-2-3", "local vegetable","red onion",2.03),
+("2021-2-3", "local vegetable","small bitter gourd",3.88),
+("2021-2-3", "local vegetable","french bean",5.96),
+("2021-2-3", "local vegetable","fried taufu",2.49),
+("2021-2-3", "local vegetable","tomato",4.20),
+("2021-2-3", "local vegetable","cucumber",2.03),
+("2021-2-3", "local vegetable","green mint leaves",1.90),
+("2021-2-3", "snack","nora peanut sheet",4.90),
+("2021-2-3", "dry produce","cholle",4.45),
+("2021-2-3", "dry produce","paraboiled rice 1kg",5.20),
+("2021-2-3", "dry produce","bread",2.90),
+("2021-2-3", "dry produce","pilsbury aata 5kg",20.80);
+
+# 10-Feb-2021 grocery shopping data
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-2-10", "local vegetable","red onion",3.22),
+("2021-2-10", "local vegetable","small bitter gourd",3.99),
+("2021-2-10", "local vegetable","green chilli",1.40),
+("2021-2-10", "local vegetable","fried taufu",2.49),
+("2021-2-10", "local vegetable","tomato",4.78),
+("2021-2-10", "local vegetable","cucumber",2.91),
+("2021-2-10", "local vegetable","green mint leaves",1.89),
+("2021-2-10", "dry produce","rasaku coconut milk 6pcs",13.20),
+("2021-2-10", "dry produce","samudra banana cake",4.30),
+("2021-2-10", "dairy produce","yeo yogurt",7.80);
+
+# 17-Feb-2021 grocery shopping data
+insert into tbl_grocery (shop_date, store_name,item_type, item_desc,item_cost)
+values 
+("2021-2-17", "TescoExtra", "local vegetable","yellow onion",3),
+("2021-2-17", "TescoExtra", "local vegetable","fried taufu",4.99),
+("2021-2-17", "TescoExtra", "local vegetable","PP kailan",2.99),
+("2021-2-17", "TescoExtra", "local vegetable","green chilli",2.21),
+("2021-2-17", "TescoExtra", "local vegetable","french bean",7.50),
+("2021-2-17", "TescoExtra", "local vegetable","radish (mooli)",5.99),
+("2021-2-17", "TescoExtra", "tea","tesco teh Tarik 15pack",8.99),
+("2021-2-17", "TescoExtra", "frozen meat","Farm best chicken nugget 800gm",11.50),
+("2021-2-17", "TescoExtra", "biscuit","Tesco sugar biscuit",3.49),
+("2021-2-17", "TescoExtra", "dry produce","yellow daal",1.36),
+("2021-2-17", "TescoExtra", "dry produce","green moong daal",3.16),
+("2021-2-17", "TescoExtra", "dairy produce","yeo yogurt",7.80),
+("2021-2-17", "TescoExtra", "liquor","tiger beer cans (x6)",34.90);
+
+# 22-Feb-2021 grocery shopping data
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-2-22", "local vegetable","broccoli",3.89),
+("2021-2-22", "local vegetable","PP kailan (chinese broccoli)",4.39),
+("2021-2-22", "local vegetable","long brinjal 2pcs",8.31),
+("2021-2-22", "local vegetable","grey oyster mushroom 100gm",3.29),
+("2021-2-22", "sweets","toffee",4),
+("2021-2-22", "local vegetable","cucumber",4.91),
+("2021-2-22", "dry produce","rasaku coconut milk 6pcs",13.20),
+("2021-2-22", "dry produce","samudra banana cake",4),
+("2021-2-22", "dairy produce","yeo yogurt",7.80);
+
+# 25-Feb-2021 grocery shopping data
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-2-25", "local vegetable","green chilli",0.84),
+("2021-2-25", "local vegetable","onion",1.73),
+("2021-2-25", "local vegetable","potato",1.22),
+("2021-2-25", "local vegetable","small bitter gourd",2.68),
+("2021-2-25", "local vegetable","grey oyster mushroom 100gm",3.29),
+("2021-2-25", "local vegetable","shittake mushroom",4.99),
+("2021-2-25", "local vegetable","cucumber",6.32),
+("2021-2-25", "local vegetable","old ginger",1.44),
+("2021-2-25", "local vegetable","curry leaf",0.95),
+("2021-2-25", "local vegetable","garlic",1.42),
+("2021-2-25", "dry produce","enrico soya mate",2.95),
+("2021-2-25", "dry produce","mony papadam",2.35),
+("2021-2-25", "biscuit","hup seng cream biscuit",3.95),
+("2021-2-25", "cooking oil","Basso Sunflower Oil 1L",9.80);
+
+# 27-Feb-2021 grocery shopping data
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values 
+("2021-2-27", "local vegetable","baby yam (arbi)",2.45),
+("2021-2-27", "local vegetable","french bean",2.31),
+("2021-2-27", "local vegetable","shittake mushroom",4.99),
+("2021-2-27", "dry produce","pilsbury chakki aata 5kg",2.80),
+("2021-2-27", "dry produce","samudra banana cake",4),
+("2021-2-27", "frying oil","tiaga deep frying oil 1L",2.50);
+
+##### GROCERY SHOPPING DATA FOR YEAR 2020
 # Grocery Shopping data September 2020
 use logbook;
 desc logbook.tbl_grocery;
