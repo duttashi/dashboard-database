@@ -250,6 +250,7 @@ values
 # Jan 2021 - Grocery Shopping data
 use logbook;
 desc logbook.tbl_grocery;
+
 # add grocery shopping data for 2-Jan-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values
@@ -267,7 +268,64 @@ values
 ("2021-1-2", "toiletries","Gilette Blue Razor pack (on promo)",13.29),
 ("2021-1-2", "toiletries","Harpic Toilet Tablets 6pcs x50gm",17.90);
 
+# add grocery shopping data for 11-Jan-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values
+("2021-1-11", "local vegetable","potato",4.04),
+("2021-1-11", "local vegetable","garlic",2.46),
+("2021-1-11", "local vegetable","curry leaf",1.43),
+("2021-1-11", "local vegetable","tomato",7.83),
+("2021-1-11", "local vegetable","red onion",6.06),
+("2021-1-11", "local vegetable","potato",2.05),
+("2021-1-11", "local vegetable","broccoli",3.69),
+("2021-1-11", "local vegetable","cucumber",3.48),
 
+("2021-1-11", "dry produce","pilsbury aata 5kg",20.80),
+("2021-1-11", "dry produce","red kidney beans",2.51),
+("2021-1-11", "dry produce","thoor daal",1.93),
+("2021-1-11", "dry produce","Captain Cook 800gm Oats (green)",8.80),
+("2021-1-11", "dry produce","Mighty White Bread",2.80),
+
+("2021-1-11", "spices","jeera mix",0.83),
+("2021-1-11", "spices","salt",0.50),
+
+("2021-1-11", "tea","Boh Double Chamber Green Tea 50 pcs(promo)",9.39),
+("2021-1-11", "tea","Promex Chocolate drink-25 packs (promo)",8.99);
+
+# add grocery shopping data for 12-Jan-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values
+("2021-1-12", "biscuit","hup seng cream crackers",3.99),
+("2021-1-12", "dry produce","melawi daal",2.43),
+("2021-1-12", "cooking oil","Basso Sunflower Oil 1L",9.80),
+("2021-1-12", "butter","Crispo Margarine 1kg",4.50),
+("2021-1-12", "fruit","gala red apple 8pcs",8.99),
+("2021-1-12", "laundry","Royal Dish washing liquid 1L",3.90);
+
+# add grocery shopping data for 27-Jan-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values
+("2021-1-27", "local vegetable","green chilli",1.74),
+("2021-1-27", "local vegetable","karela x3pcs",3.50),
+("2021-1-27", "local vegetable","curry leaf",0.85),
+("2021-1-27", "local vegetable","ginger",2.25),
+("2021-1-27", "local vegetable","broccoli",3.29),
+("2021-1-27", "local vegetable","cucumber",1.39),
+("2021-1-27", "dry produce","cholle",3.93),
+("2021-1-27", "dry produce","Moongfali ke daane",3.93),
+("2021-1-27", "dry produce","Dry Matar",2.57),
+("2021-1-27", "toiletries","Darlie Toothpaste twin pack charcoal flavour",15.90),
+("2021-1-27", "toiletries","Antbax Bar Soap 3+1",4.90),
+("2021-1-27", "coffee","Kopiko brow Coffee x25 packs(promo)",9.88);
+
+# add grocery shopping data for 29-Jan-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values
+("2021-1-29", "local vegetable","cucumber",1.22),
+("2021-1-29", "local vegetable","tomato",5.07),
+("2021-1-29", "spices","jeera",1.60),
+("2021-1-29", "dry produce","samudra banana cake",4.30),
+("2021-1-29", "dairy produce","yeo asli yogurt (6 tetrapack 250 ml each)",7.80);
 
 
 
