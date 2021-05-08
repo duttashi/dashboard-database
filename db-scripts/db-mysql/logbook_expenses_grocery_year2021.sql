@@ -1,4 +1,4 @@
-# GROCERY SHOPPING DATA LOGBOOK FOR YEAR 2021
+﻿# GROCERY SHOPPING DATA LOGBOOK FOR YEAR 2021
 
 use logbook;
 alter table tbl_grocery modify item_desc varchar(150);
@@ -9,6 +9,29 @@ alter table tbl_grocery modify column store_loc varchar(30) not null default 'Se
 # May 2021 - Grocery Shopping data
 use logbook;
 desc logbook.tbl_grocery;
+
+# add grocery shopping data for 7-May-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values
+("2021-5-7", "local vegetable","fried taufu (key brand)",2.30),
+("2021-5-7", "local vegetable","green capsicum 3pcs",3.78),
+("2021-5-7", "local vegetable","baby yam",6.02),
+("2021-5-7", "local vegetable","tomato",5.20),
+("2021-5-7", "local vegetable","red onion",2.02),
+("2021-5-7", "local vegetable","potato (russet)",4.45),
+("2021-5-7", "local vegetable","garlic",1.08),
+("2021-5-7", "local vegetable","shittake mushrooms",4.99),
+("2021-5-7", "dry produce","loose soyamate",1.38),
+("2021-5-7", "dry produce","dry matar",4.45),
+("2021-5-7", "dry produce","pilsbury aata 2kg",8.35),
+("2021-5-7", "snack","samudra banana cake",4.30),
+("2021-5-7", "snack","nora peanut sheet",5.50),
+("2021-5-7", "cooking oil","Basso Sunflower Oil 1L",9.80),
+("2021-5-7", "tea","Lipton green tea 25pack",6.60),
+("2021-5-7", "coffee","Nescafe 3in1 orig 19g x 28 (discount)",10.89),
+("2021-5-7", "laundry","touch diswasher iron net",0.90);
+
+
 # add grocery shopping data for 1-May-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values
