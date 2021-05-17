@@ -10,7 +10,27 @@ alter table tbl_grocery modify column store_loc varchar(30) not null default 'Se
 use logbook;
 desc logbook.tbl_grocery;
 
-# add grocery shopping data for 7-May-2021
+# Grocery shopping data for 16-May-2021
+insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
+values
+("2021-5-16", "local vegetable","green capsicum 3pcs",3.80),
+("2021-5-16", "local vegetable","baby yam",7.02),
+("2021-5-16", "local vegetable","tomato",2.75),
+("2021-5-16", "local vegetable","red onion",3),
+("2021-5-16", "local vegetable","potato (russet)",2.89),
+("2021-5-16", "local vegetable","garlic",1.44),
+("2021-5-16", "local vegetable","shittake mushrooms",4.99),
+("2021-5-16", "local vegetable","green chilli",0.88),
+("2021-5-16", "local vegetable","old ginger",1.12),
+("2021-5-16", "local vegetable","loose carrots",3.72),
+("2021-5-16", "dry produce","dry matar",2.71),
+("2021-5-16", "dry produce","black split daal 0.221gm",1.43),
+("2021-5-16", "dry produce","poha (malay-aval) 0.353gm",2.34),
+("2021-5-16", "dry produce","pilsbury aata 1kg",4.30),
+("2021-5-16", "snack","samudra banana cake",4),
+("2021-5-16", "toiletries","fax bar soap 4x70gm",2.10);
+
+# Grocery shopping data for 7-May-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values
 ("2021-5-7", "local vegetable","fried taufu (key brand)",2.30),
@@ -32,7 +52,7 @@ values
 ("2021-5-7", "laundry","touch diswasher iron net",0.90);
 
 
-# add grocery shopping data for 1-May-2021
+# Grocery shopping data for 1-May-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values
 ("2021-5-1", "local vegetable","fried taufu",2.05),
@@ -48,7 +68,7 @@ values
 # April 2021 - Grocery Shopping data
 use logbook;
 desc logbook.tbl_grocery;
-# add grocery shopping data for 17-April-2021
+# Grocery shopping data for 17-April-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values
 ("2021-4-17", "local vegetable","cucumber",3.81),
@@ -59,7 +79,7 @@ values
 ("2021-4-17", "dry produce","cholle (kidney bean)",4.45),
 ("2021-4-17", "coffee","kapal white coffee wit chocolate 20pc",7.90);
 
-# add grocery shopping data for 9-April-2021
+# Grocery shopping data for 9-April-2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values ("2021-4-9", "local vegetable","shittake mushroom",4.99),
 ("2021-4-9", "local vegetable","french bean",1.73),
@@ -76,7 +96,7 @@ values ("2021-4-9", "local vegetable","shittake mushroom",4.99),
 ("2021-4-9", "dry produce","kuih cake",5.50);
 
 
-# add grocery shopping data for 4/April/2021
+# Grocery shopping data for 4/April/2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values ("2021-4-4", "local vegetable","green chilli",1.24),
 ("2021-4-4", "local vegetable","french bean",1.73),
@@ -86,7 +106,7 @@ values ("2021-4-4", "local vegetable","green chilli",1.24),
 ("2021-4-4", "local vegetable","broccoli",2.99),
 ("2021-4-4", "local vegetable","tomato",2.39);
 
-# add grocery shopping data for 2/April/2021
+# Grocery shopping data for 2/April/2021
 insert into tbl_grocery (shop_date, item_type, item_desc,item_cost)
 values ("2021-4-2", "tobacco","marlboro light cigratte",17.40);
 
