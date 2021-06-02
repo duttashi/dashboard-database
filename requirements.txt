@@ -22,5 +22,5 @@ six==1.14.0
 spyder==4.1.2
 spyder-kernels==1.9.0
 Twisted==20.3.0
-urllib3==1.25.8
+urllib3==1.26.5
 
