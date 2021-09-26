@@ -2,6 +2,7 @@
 """
 Created on Fri Jun  5 11:28:48 2020
 Objective: Write mysql table into a pandas dataframe
+Modified on Sun Sep 26 3:58 PM
 @author: Ashish
 """
 
@@ -11,7 +12,7 @@ import pandas as pd
 
 # Define global variables
 # connect to server
-mysql_engine = create_engine('mysql://root:ashoo@localhost/logbook')
+mysql_engine = create_engine('mysql://dbname:dbpassword@localhost/dbname')
 myconxn = mysql_engine.connect()
 #print(myconxn.execute("SELECT * FROM LOGBOOK"))
 try:
