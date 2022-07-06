@@ -2,7 +2,7 @@ beautifulsoup4==4.8.2
 conda==4.8.3
 conda-package-handling==1.7.0
 fake-useragent==0.1.11
-lxml==4.6.5
+lxml==4.9.1
 matplotlib==3.2.1
 mysql-connector-python==8.0.20
 numpy==1.18.1
