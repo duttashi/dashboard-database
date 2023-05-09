@@ -2,7 +2,6 @@ beautifulsoup4==4.8.2
 conda==4.8.3
 conda-package-handling==1.7.0
 fake-useragent==0.1.11
-lxml>=4.9.1
 matplotlib==3.2.1
 mysql-connector-python==8.0.20
 numpy>=1.19
@@ -21,6 +20,4 @@ simplejson==3.17.0
 six==1.14.0
 spyder==4.1.2
 spyder-kernels==1.9.0
-Twisted>=22.1
-urllib3==1.25.8
 
